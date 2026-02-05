@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get_x/get_state_manager/src/simple/get_state.dart';
+import 'package:get_x/get_state_manager/get_state_manager.dart';
 import 'package:getx/controller/home_controller.dart';
 
 class Home extends StatelessWidget {
@@ -14,7 +14,7 @@ class Home extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            GetBuilder<HomeController>(
+            GetX<HomeController>(
               init: HomeController(),
               builder: (controller) => Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -30,7 +30,7 @@ class Home extends StatelessWidget {
                   ),
                   Center(
                     child: Text(
-                      "${controller.counter}",
+                      "${controller.counter.value}",
                       style: TextStyle(fontSize: 30),
                     ),
                   ),

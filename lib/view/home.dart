@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get_x/get.dart';
 import 'package:get_x/get_state_manager/get_state_manager.dart';
 import 'package:getx/controller/home_controller.dart';
 
 class Home extends StatelessWidget {
-  const Home({super.key});
+  Home({super.key});
+  final HomeController controller = Get.put(HomeController());
 
   @override
   Widget build(BuildContext context) {
@@ -14,9 +16,8 @@ class Home extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            GetX<HomeController>(
-              init: HomeController(),
-              builder: (controller) => Row(
+            Obx(
+              () => Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(

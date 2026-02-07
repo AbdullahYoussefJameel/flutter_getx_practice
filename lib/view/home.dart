@@ -3,14 +3,18 @@ import 'package:flutter/material.dart';
 import 'package:get_x/get.dart';
 
 import 'package:getx/controller/home_controller.dart';
-import 'package:getx/view/pagethree.dart';
+import 'package:getx/view/pageone.dart';
 
 import 'package:getx/view/pagetwo.dart';
 
 class Home extends StatelessWidget {
   Home({super.key});
 
-  final HomeController controller = Get.put(HomeController());
+  // final controller = Get.lazyPut(
+  //   () => HomeController(), // only on time call
+
+  //   fenix: true, //call and delete data
+  // );
 
   @override
   Widget build(BuildContext context) {
@@ -21,21 +25,21 @@ class Home extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            ElevatedButton(
-              onPressed: () => Get.to(() => Pageone()),
-              child: const Text("Page One"),
+            Center(
+              child: ElevatedButton(
+                onPressed: () {
+                  Get.to(() => Pageone());
+                },
+                child: const Text("Page One"),
+              ),
             ),
-            ElevatedButton(
-              onPressed: () {}, // => Get.to(() => paget()),
-              child: const Text("Page Two"),
-            ),
-            ElevatedButton(
-              onPressed: () => Get.to(() => pagethree()),
-              child: const Text("Page Three"),
-            ),
-            ElevatedButton(
-              onPressed: () {}, // => Get.to(() => ()),
-              child: const Text("Page Four"),
+            Center(
+              child: ElevatedButton(
+                onPressed: () {
+                  Get.to(() => Pagetwo());
+                },
+                child: const Text("Page Two"),
+              ),
             ),
           ],
         ),

@@ -11,4 +11,6 @@ class HomeController extends GetxController {
     counter--;
     update();
   }
+
+  int get sum => counter;
 }

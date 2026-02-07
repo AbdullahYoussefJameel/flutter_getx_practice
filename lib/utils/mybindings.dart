@@ -8,7 +8,7 @@ class MyBindings extends Bindings {
   void dependencies() {
     Get.lazyPut(
       () => HomeController(),
-      fenix: true,
+      // fenix: true,
     ); //data that will delete whene you leave thepage
     //Get.put<HomeController>(HomeController(), permanent: true);//data keep in app
   }

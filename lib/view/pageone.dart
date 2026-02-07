@@ -20,6 +20,7 @@ class Pageone extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print("build");
     return Scaffold(
       appBar: AppBar(title: const Text('Page one')),
       body: Padding(
@@ -50,7 +51,7 @@ class Pageone extends StatelessWidget {
                   child: IconButton(
                     icon: const Icon(Icons.remove, size: 40),
                     onPressed: () {
-                      controller.dncrement();
+                      controller.decrement();
                     },
                   ),
                 ),

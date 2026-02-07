@@ -1,4 +1,4 @@
-import 'package:get_x/get_state_manager/get_state_manager.dart';
+import 'package:get/get_state_manager/src/simple/get_controllers.dart';
 
 class HomeController extends GetxController {
   int counter = 0;

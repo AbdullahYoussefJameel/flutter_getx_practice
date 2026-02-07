@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:get_x/get_navigation/src/root/get_material_app.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:get/get_navigation/src/routes/get_route.dart';
 
+import 'package:getx/utils/mybindings.dart';
 import 'package:getx/view/home.dart';
 
 void main() {
@@ -12,6 +14,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(title: 'flutter demo', home: Home());
+    return GetMaterialApp(
+      initialRoute: '/',
+      initialBinding: MyBindings(),
+      getPages: [
+        GetPage(
+          name: '/',
+          page: () => Home(), // binding: MyBindings()
+        ),
+      ],
+    );
   }
 }

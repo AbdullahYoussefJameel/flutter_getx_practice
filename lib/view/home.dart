@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/route_manager.dart';
 
-import 'package:get_x/get.dart';
-
-import 'package:getx/controller/home_controller.dart';
+import 'package:getx/utils/mybindings.dart';
 import 'package:getx/view/pageone.dart';
 
 import 'package:getx/view/pagetwo.dart';
@@ -28,7 +28,9 @@ class Home extends StatelessWidget {
             Center(
               child: ElevatedButton(
                 onPressed: () {
-                  Get.to(() => Pageone());
+                  Get.to(
+                    () => Pageone(), // binding: MyBindings()
+                  );
                 },
                 child: const Text("Page One"),
               ),

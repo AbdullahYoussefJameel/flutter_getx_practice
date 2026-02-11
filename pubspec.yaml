@@ -16,6 +16,7 @@ dependencies:
 
   # GetX official package (replace get_x)
   get: ^4.6.6
+  shared_preferences: ^2.5.4
 
 dev_dependencies:
   flutter_test:

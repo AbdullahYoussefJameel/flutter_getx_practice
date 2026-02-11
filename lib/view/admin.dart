@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:get/instance_manager.dart';
 import 'package:get/route_manager.dart';
 
 import 'package:getx/main.dart';
 
-class Home extends StatelessWidget {
-  Home({super.key});
+class Admin extends StatelessWidget {
+  Admin({super.key});
 
   // final HomeController controller = Get.put(HomeController());
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('home ')),
+      appBar: AppBar(title: const Text('admin ')),
       body: Container(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
